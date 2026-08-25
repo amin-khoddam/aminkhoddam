@@ -1,26 +1,322 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* ------------------------------------------------------------------
+   Design tokens exposed to Tailwind utilities.
+   Everything below maps a semantic token to a CSS variable so the light
+   and dark palettes stay in one place.
+   ------------------------------------------------------------------ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-brand: var(--brand);
+  --color-brand-accent: var(--brand-accent);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-code);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+
+  --shadow-soft: var(--elevation-soft);
+  --shadow-elevated: var(--elevation-elevated);
+
+  --animate-float: float 9s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -14px, 0);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --radius: 0.9rem;
+
+  --font-body: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), system-ui, sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Light palette */
+  --background: oklch(0.985 0.004 272);
+  --foreground: oklch(0.21 0.023 274);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.023 274);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.023 274);
+  --primary: oklch(0.55 0.208 284);
+  --primary-foreground: oklch(0.99 0.005 284);
+  --secondary: oklch(0.955 0.008 274);
+  --secondary-foreground: oklch(0.28 0.026 274);
+  --muted: oklch(0.958 0.007 274);
+  --muted-foreground: oklch(0.5 0.021 274);
+  --accent: oklch(0.945 0.017 284);
+  --accent-foreground: oklch(0.35 0.1 284);
+  --destructive: oklch(0.55 0.216 27);
+  --success: oklch(0.55 0.14 158);
+  --brand: oklch(0.55 0.208 284);
+  --brand-accent: oklch(0.6 0.115 210);
+  --border: oklch(0.21 0.023 274 / 11%);
+  --input: oklch(0.21 0.023 274 / 14%);
+  --ring: oklch(0.55 0.208 284 / 45%);
+
+  /* Surfaces */
+  --glass: oklch(1 0 0 / 72%);
+  --glass-strong: oklch(1 0 0 / 88%);
+  --glass-border: oklch(0.21 0.023 274 / 9%);
+  --glass-blur: 16px;
+  --elevation-soft: 0 1px 2px oklch(0.21 0.023 274 / 6%), 0 10px 30px oklch(0.21 0.023 274 / 6%);
+  --elevation-elevated:
+    0 2px 4px oklch(0.21 0.023 274 / 5%), 0 24px 60px oklch(0.21 0.023 274 / 12%);
+
+  /* Ambient background */
+  --aurora-1: oklch(0.55 0.208 284 / 16%);
+  --aurora-2: oklch(0.6 0.115 210 / 14%);
+  --grid-line: oklch(0.21 0.023 274 / 5%);
+  --noise-opacity: 0.03;
+}
+
+.dark {
+  --background: oklch(0.163 0.019 272);
+  --foreground: oklch(0.968 0.006 272);
+  --card: oklch(0.208 0.021 272);
+  --card-foreground: oklch(0.968 0.006 272);
+  --popover: oklch(0.208 0.021 272);
+  --popover-foreground: oklch(0.968 0.006 272);
+  --primary: oklch(0.685 0.175 285);
+  --primary-foreground: oklch(0.17 0.045 285);
+  --secondary: oklch(0.27 0.023 272);
+  --secondary-foreground: oklch(0.95 0.008 272);
+  --muted: oklch(0.262 0.021 272);
+  --muted-foreground: oklch(0.724 0.021 272);
+  --accent: oklch(0.3 0.045 285);
+  --accent-foreground: oklch(0.92 0.03 285);
+  --destructive: oklch(0.68 0.19 25);
+  --success: oklch(0.74 0.15 158);
+  --brand: oklch(0.685 0.175 285);
+  --brand-accent: oklch(0.79 0.115 205);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.685 0.175 285 / 55%);
+
+  --glass: oklch(1 0 0 / 5%);
+  --glass-strong: oklch(1 0 0 / 8%);
+  --glass-border: oklch(1 0 0 / 11%);
+  --elevation-soft: 0 1px 2px oklch(0 0 0 / 35%), 0 12px 32px oklch(0 0 0 / 28%);
+  --elevation-elevated: 0 2px 6px oklch(0 0 0 / 40%), 0 28px 70px oklch(0 0 0 / 45%);
+
+  --aurora-1: oklch(0.685 0.175 285 / 18%);
+  --aurora-2: oklch(0.79 0.115 205 / 13%);
+  --grid-line: oklch(1 0 0 / 4%);
+  --noise-opacity: 0.05;
+}
+
+/* Persian typography: one family covers display and body. */
+html[lang="fa"] {
+  --font-body: var(--font-vazirmatn), system-ui, sans-serif;
+  --font-display: var(--font-vazirmatn), system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    /* Keeps anchored sections clear of the sticky header. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  html[lang="fa"] body {
+    line-height: 1.85;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--brand) 35%, transparent);
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
+  /*
+   * Collapses CSS animations and transitions to an imperceptible duration and
+   * stops looping decorations. Overlay primitives still reach their open state
+   * because their keyframes end at the base style. Framer Motion runs on its
+   * own timeline and is handled by `MotionConfig reducedMotion="user"`.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /*
+   * Frosted surface used for the header, cards and sheets.
+   * The blur goes through Tailwind's backdrop utilities rather than a hand
+   * written `backdrop-filter`, which the CSS minifier collapses to the
+   * `-webkit-` prefix alone and effectively drops.
+   */
+  .glass-panel {
+    background-color: var(--glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--elevation-soft);
+    @apply backdrop-blur-[var(--glass-blur)] backdrop-saturate-150;
+  }
+
+  .glass-panel-strong {
+    background-color: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--elevation-elevated);
+    @apply backdrop-blur-[calc(var(--glass-blur)*1.4)] backdrop-saturate-[1.6];
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(
+      100deg,
+      var(--brand) 0%,
+      color-mix(in oklab, var(--brand) 45%, var(--brand-accent)) 55%,
+      var(--brand-accent) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Ambient page background: soft aurora glows over a faint grid. */
+  .ambient-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(60rem 34rem at 78% -8%, var(--aurora-1), transparent 62%),
+      radial-gradient(52rem 32rem at 6% 104%, var(--aurora-2), transparent 60%),
+      linear-gradient(to bottom, transparent, var(--background) 92%);
+  }
+
+  .ambient-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    mask-image: radial-gradient(70% 55% at 50% 0%, #000 20%, transparent 100%);
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 3.5rem 3.5rem;
+  }
+
+  .ambient-noise {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Consistent page gutter and max width across every section. */
+  .container-page {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 76rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Numerals stay upright and grouped in both directions. */
+  .tabular-amount {
+    font-variant-numeric: tabular-nums;
+    unicode-bidi: plaintext;
+  }
+}
+
+/* Scrollbar styling: subtle, matches the surface tokens. */
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+    background-color: color-mix(in oklab, var(--foreground) 22%, transparent);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: color-mix(in oklab, var(--foreground) 34%, transparent);
+  }
 }

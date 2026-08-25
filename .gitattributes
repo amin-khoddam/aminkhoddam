@@ -1,0 +1,9 @@
+# Normalize line endings so formatting stays stable across platforms.
+* text=auto eol=lf
+
+# Binary assets must not be touched.
+*.pdf binary
+*.ico binary
+*.png binary
+*.jpg binary
+*.woff2 binary

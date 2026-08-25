@@ -12,26 +12,43 @@
 
 # testing
 /coverage
+/test-results
 
 # next.js
 /.next/
 /out/
+.turbo
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
 
-# debug
+# logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# secrets and environment files (the committed template is .env.example)
+.env
+.env.*
+!.env.example
+
+# docker
+docker-compose.override.yml
+compose.override.yaml
+
+# editors
+.idea
+.vscode/*
+!.vscode/extensions.json
 
 # vercel
 .vercel

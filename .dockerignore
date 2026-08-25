@@ -1,0 +1,30 @@
+# Keep the build context small: everything the image needs is produced by the
+# build stage from source plus the lockfile.
+.git
+.github
+.next
+node_modules
+coverage
+dist
+build
+out
+
+# Environment and secrets never enter the image.
+.env
+.env.*
+!.env.example
+
+# Local tooling and docs
+docs
+*.md
+!README.md
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.log
+
+# Docker files themselves
+Dockerfile
+.dockerignore
+compose.yaml

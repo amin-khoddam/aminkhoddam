@@ -1,0 +1,339 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Amin Khoddam — Frontend Developer",
+      "description": "Frontend developer with 3 years of experience building production React and Next.js interfaces, design systems and fintech-grade flows."
+    },
+    "wallet": {
+      "title": "Wallet",
+      "description": "A demo wallet that shows balance, top-up, withdrawal and transaction history."
+    },
+    "payment": {
+      "title": "Secure payment",
+      "description": "Demo payment gateway used by the wallet top-up flow."
+    }
+  },
+  "common": {
+    "currency": "Toman",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "continue": "Continue",
+    "back": "Back",
+    "retry": "Try again",
+    "loading": "Loading…",
+    "processing": "Processing…",
+    "demo": "Demo",
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "brandName": "Amin Khoddam",
+    "brandRole": "Frontend Developer",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume",
+    "wallet": "Wallet",
+    "openMenu": "Open menu",
+    "menuTitle": "Navigation",
+    "menuDescription": "Jump to a section or open the wallet.",
+    "backToPortfolio": "Back to portfolio"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "fa": "فارسی",
+    "en": "English"
+  },
+  "hero": {
+    "availability": "Available for frontend work",
+    "name": "Amin Khoddam",
+    "headlineLead": "I build",
+    "headlineHighlight": "interfaces that feel effortless",
+    "headlineTail": "and hold up in production.",
+    "intro": "Frontend developer with 3 years of experience shipping React and Next.js products. I care about design systems, type-safe state, accessible flows, and interfaces that work equally well in Persian and English.",
+    "primaryCta": "View projects",
+    "secondaryCta": "Download resume",
+    "stackLabel": "Working with",
+    "stats": {
+      "years": { "value": "3+", "label": "Years of experience" },
+      "projects": { "value": "18", "label": "Shipped features" },
+      "locales": { "value": "2", "label": "RTL & LTR locales" },
+      "lighthouse": { "value": "98", "label": "Lighthouse score" }
+    },
+    "card": {
+      "title": "Wallet balance",
+      "subtitle": "Live demo inside this portfolio",
+      "action": "Open wallet",
+      "hint": "Top-up, withdraw and pay — all persisted locally."
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Frontend engineering with a product mindset",
+    "lead": "I turn product requirements into interfaces that are fast, accessible and maintainable — and I document the decisions behind them.",
+    "paragraphs": {
+      "p1": "For the past three years I have worked on customer-facing web products: fintech dashboards, booking flows and internal tools. Most of that work is React and Next.js with TypeScript, and most of the value comes from getting the fundamentals right — state that is predictable, forms that validate close to the user, and layouts that survive real content.",
+      "p2": "I like owning a design system end to end: tokens, components, motion rules, and the documentation that keeps a team from inventing a fifth button style. When the system is solid, feature work becomes assembly instead of archaeology.",
+      "p3": "Because I ship for Persian-speaking users, RTL is a first-class requirement rather than a late patch — mirrored layouts, localized number and currency formats, and copy that lives in the message catalog instead of being hard-coded in components."
+    },
+    "highlights": {
+      "systems": {
+        "title": "Design systems",
+        "description": "Token-driven UI with a single source of truth for color, spacing, radius and elevation."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Server components by default, code splitting where it counts, and a tight client bundle."
+      },
+      "accessibility": {
+        "title": "Accessibility & RTL",
+        "description": "Keyboard-complete components, honest focus states, and layouts that mirror correctly."
+      },
+      "quality": {
+        "title": "Testing & DX",
+        "description": "Pure domain logic under unit tests, strict TypeScript, and linting that runs in CI."
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "The stack I reach for",
+    "description": "Tools I use day to day — the same ones this portfolio and its wallet demo are built with.",
+    "groups": {
+      "core": { "title": "Core", "description": "The foundation of every project I ship." },
+      "ui": {
+        "title": "UI & Motion",
+        "description": "Component libraries, styling and purposeful animation."
+      },
+      "data": {
+        "title": "State & Data",
+        "description": "Predictable state, type-safe forms and server data."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Guardrails that keep a codebase healthy over time."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "Getting the work from a branch into production."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Three years, three teams",
+    "description": "Where I have worked and what I actually shipped there.",
+    "present": "Present",
+    "items": {
+      "nikan": {
+        "company": "Nikan Pay",
+        "role": "Frontend Developer",
+        "period": "Mar 2025 — Present",
+        "summary": "Own the customer-facing wallet and payment surfaces of a consumer fintech app.",
+        "highlights": {
+          "h1": "Rebuilt the top-up and withdrawal flows around a shared amount input with instant validation, noticeably cutting failed submissions.",
+          "h2": "Introduced a typed transaction layer so balance math lives in one tested module instead of being duplicated across screens.",
+          "h3": "Moved static marketing pages to server components and trimmed the client bundle for the authenticated area."
+        }
+      },
+      "radmehr": {
+        "company": "Radmehr Studio",
+        "role": "Frontend Developer",
+        "period": "Jun 2024 — Feb 2025",
+        "summary": "Built client web products in a small product studio, from design handoff to release.",
+        "highlights": {
+          "h1": "Delivered a multi-tenant admin dashboard with server-driven tables, filters and pagination.",
+          "h2": "Set up the studio component library so three concurrent projects shared one set of primitives.",
+          "h3": "Added Persian and English support with full RTL mirroring to an existing single-locale codebase."
+        }
+      },
+      "parsa": {
+        "company": "Parsa Web",
+        "role": "Junior Frontend Developer",
+        "period": "Aug 2023 — May 2024",
+        "summary": "First professional role: turning designs into responsive, tested React interfaces.",
+        "highlights": {
+          "h1": "Converted a legacy jQuery storefront into a component-based React application, screen by screen.",
+          "h2": "Replaced ad-hoc form handling with React Hook Form and shared schema validation.",
+          "h3": "Wrote the first responsive checklist for the team after fixing a long tail of mobile layout bugs."
+        }
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "description": "A few projects that show how I structure frontend code. Details are placeholders for now.",
+    "roleLabel": "Role",
+    "viewDemo": "Live demo",
+    "viewCode": "Source",
+    "openWallet": "Open the wallet",
+    "featured": "Featured",
+    "items": {
+      "wallet": {
+        "name": "Wallet & Payments Demo",
+        "role": "Design & implementation",
+        "description": "The fintech demo built into this site: balance, validated top-up and withdrawal sheets, a simulated gateway, and a persisted transaction history."
+      },
+      "commerce": {
+        "name": "Sanaa Commerce Console",
+        "role": "Frontend Developer",
+        "description": "A B2B order console with server-driven tables, saved filters and bulk actions. Query caching keeps navigation instant without serving stale data."
+      },
+      "booking": {
+        "name": "Mehr Clinic Booking",
+        "role": "Frontend Developer",
+        "description": "An appointment booking flow designed mobile-first: a stepped form, a calendar picker, and an offline-tolerant confirmation screen."
+      },
+      "atlas": {
+        "name": "Atlas Design System",
+        "role": "Maintainer",
+        "description": "An internal component library with design tokens, RTL-aware primitives and documented motion rules, consumed by several product teams."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let us build something",
+    "description": "I am open to frontend roles and focused freelance work. The fastest way to reach me is email.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "location": "Tehran, Iran",
+    "availabilityLabel": "Availability",
+    "availability": "Open to new opportunities",
+    "primaryCta": "Send an email",
+    "secondaryCta": "Download resume",
+    "socialLabel": "Elsewhere",
+    "placeholderNote": "Contact details are placeholders in this demo build."
+  },
+  "footer": {
+    "tagline": "Built with Next.js, TypeScript and Tailwind CSS.",
+    "rights": "All rights reserved.",
+    "sections": "Sections",
+    "demo": "Demo"
+  },
+  "wallet": {
+    "title": "Wallet",
+    "subtitle": "A demo wallet stored in your browser. No real money is involved.",
+    "demoNotice": "Demo only — balance and transactions are saved in this browser's local storage.",
+    "balanceLabel": "Current balance",
+    "availableToWithdraw": "Available to withdraw: {amount} {currency}",
+    "addBalance": "Add balance",
+    "withdraw": "Withdraw",
+    "amountLabel": "Amount",
+    "amountPlaceholder": "e.g. 500,000",
+    "rangeHint": "Between {min} and {max} {currency}",
+    "quickAmounts": "Quick amounts",
+    "topUp": {
+      "title": "Add balance",
+      "description": "Enter the amount you want to add, then continue to the payment gateway.",
+      "submit": "Continue to payment"
+    },
+    "withdrawSheet": {
+      "title": "Withdraw",
+      "description": "Enter the amount to withdraw from your wallet balance.",
+      "submit": "Confirm withdrawal",
+      "maxHint": "You can withdraw up to {amount} {currency} right now.",
+      "success": "{amount} {currency} was withdrawn from your wallet."
+    },
+    "transactions": {
+      "title": "Transaction history",
+      "description": "Most recent activity first.",
+      "empty": "No transactions yet",
+      "emptyDescription": "Add balance to your wallet to see your first transaction here.",
+      "types": {
+        "topup": "Wallet top-up",
+        "withdrawal": "Withdrawal",
+        "resume_purchase": "Resume download"
+      },
+      "reference": "Ref {reference}",
+      "clear": "Reset wallet",
+      "clearConfirmTitle": "Reset wallet data?",
+      "clearConfirmDescription": "This sets the balance back to zero and deletes all demo transactions from this browser.",
+      "cleared": "Wallet data has been reset."
+    },
+    "errors": {
+      "INVALID_AMOUNT": "Enter a valid amount.",
+      "AMOUNT_TOO_LOW": "The minimum amount is {min} {currency}.",
+      "AMOUNT_TOO_HIGH": "The maximum amount is {max} {currency}.",
+      "INSUFFICIENT_FUNDS": "Not enough balance. You can withdraw up to {amount} {currency}.",
+      "DUPLICATE_REFERENCE": "This transaction has already been applied."
+    }
+  },
+  "payment": {
+    "title": "Payment gateway",
+    "demoBanner": "Simulated gateway — do not enter real card details.",
+    "merchant": "Amin Khoddam Portfolio",
+    "amountLabel": "Amount payable",
+    "cardNumberLabel": "Card number",
+    "cardNumberPlaceholder": "0000 0000 0000 0000",
+    "expiryLabel": "Expiration date",
+    "expiryMonthPlaceholder": "MM",
+    "expiryYearPlaceholder": "YY",
+    "cvvLabel": "CVV2",
+    "cvvPlaceholder": "···",
+    "submit": "Pay {amount} {currency}",
+    "cancel": "Cancel payment",
+    "testCards": "Test cards",
+    "testCardApproved": "{card} — approved",
+    "testCardDeclined": "{card} — declined",
+    "processingTitle": "Contacting the gateway",
+    "processingDescription": "Please do not close this page.",
+    "successTitle": "Payment successful",
+    "successDescription": "{amount} {currency} was added to your wallet.",
+    "failureTitle": "Payment failed",
+    "backToWallet": "Back to wallet",
+    "noIntentTitle": "No payment in progress",
+    "noIntentDescription": "Start a top-up from the wallet to open the payment gateway.",
+    "referenceLabel": "Reference",
+    "errors": {
+      "CARD_DECLINED": "The card was declined by the issuer.",
+      "INVALID_CARD": "The card number is not valid.",
+      "INVALID_EXPIRY": "The expiration date is not valid.",
+      "INVALID_AMOUNT": "The payment amount is not valid.",
+      "RATE_LIMITED": "Too many attempts. Please wait a moment and try again.",
+      "NETWORK": "Could not reach the gateway. Check your connection and try again.",
+      "UNKNOWN": "Something went wrong. Please try again."
+    },
+    "validation": {
+      "cardNumber": "Enter a valid 16-digit card number.",
+      "expiryMonth": "Enter a month between 01 and 12.",
+      "expiryYear": "Enter a valid year.",
+      "expired": "This card has expired.",
+      "cvv": "CVV2 must be 3 or 4 digits."
+    }
+  },
+  "resume": {
+    "title": "Download resume",
+    "priceNotice": "Downloading the resume costs {amount} {currency} from your wallet balance.",
+    "confirmDescription": "Your balance is {balance} {currency}. After this download it will be {remaining} {currency}.",
+    "confirm": "Pay and download",
+    "insufficientTitle": "Not enough balance",
+    "insufficientDescription": "You need {amount} {currency} to download the resume, but your balance is {balance} {currency}.",
+    "goToWallet": "Go to wallet",
+    "alreadyPurchasedTitle": "Already unlocked",
+    "alreadyPurchasedDescription": "You have already paid for this resume, so this download is free.",
+    "download": "Download",
+    "downloadStarted": "Your download has started.",
+    "purchased": "{amount} {currency} was deducted from your wallet."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "action": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. You can try again.",
+    "action": "Try again"
+  }
+}
