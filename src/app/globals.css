@@ -154,7 +154,6 @@ html[lang="fa"] {
 
   html {
     @apply font-sans;
-    scroll-behavior: smooth;
     /* Keeps anchored sections clear of the sticky header. */
     scroll-padding-top: 6rem;
     -webkit-text-size-adjust: 100%;

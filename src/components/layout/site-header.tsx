@@ -38,6 +38,16 @@ export function SiteHeader() {
 
               return (
                 <Link
+                  onClick={(e) => {
+                    if (isHome) {
+                      e.preventDefault();
+
+                      document.getElementById(section)?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }
+                  }}
                   key={section}
                   href={`/#${section}`}
                   aria-current={isActive ? "true" : undefined}
