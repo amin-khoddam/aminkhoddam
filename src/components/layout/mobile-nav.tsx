@@ -45,7 +45,7 @@ export function MobileNav() {
       </SheetTrigger>
 
       <SheetContent
-        onCloseAutoFocus={e => e.preventDefault()}
+        onCloseAutoFocus={(e) => e.preventDefault()}
         side="right"
         closeLabel={tCommon("close")}
         className="rounded-l-3xl border-t pb-[max(1rem,env(safe-area-inset-bottom))]"
@@ -56,7 +56,7 @@ export function MobileNav() {
         </SheetHeader>
 
         <nav className="grid grid-cols-2 gap-2 px-5" aria-label={t("menuTitle")}>
-          {portfolioSections.map(section => (
+          {portfolioSections.map((section) => (
             <SheetClose key={section} asChild>
               <Link
                 href={`/#${section}`}

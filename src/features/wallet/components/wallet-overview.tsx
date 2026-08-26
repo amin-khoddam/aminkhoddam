@@ -104,7 +104,7 @@ export function WalletOverview() {
 
       <AmountSheet
         open={openSheet === "topup"}
-        onOpenChange={open => setOpenSheet(open ? "topup" : null)}
+        onOpenChange={(open) => setOpenSheet(open ? "topup" : null)}
         title={t("topUp.title")}
         description={t("topUp.description")}
         submitLabel={t("topUp.submit")}
@@ -114,7 +114,7 @@ export function WalletOverview() {
 
       <AmountSheet
         open={openSheet === "withdraw"}
-        onOpenChange={open => setOpenSheet(open ? "withdraw" : null)}
+        onOpenChange={(open) => setOpenSheet(open ? "withdraw" : null)}
         title={t("withdrawSheet.title")}
         description={t("withdrawSheet.description")}
         submitLabel={t("withdrawSheet.submit")}

@@ -43,7 +43,11 @@ export function ThemeToggle() {
           <ActiveIcon />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent onCloseAutoFocus={e => e.preventDefault()} align="end" className="min-w-40">
+      <DropdownMenuContent
+        onCloseAutoFocus={(e) => e.preventDefault()}
+        align="end"
+        className="min-w-40"
+      >
         <DropdownMenuLabel>{t("label")}</DropdownMenuLabel>
         <DropdownMenuRadioGroup value={mounted ? theme : undefined} onValueChange={setTheme}>
           {THEME_OPTIONS.map(({ value, Icon }) => (

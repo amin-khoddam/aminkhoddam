@@ -25,7 +25,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("container-page scroll-mt-24 my-16 sm:my-20 lg:my-24", className)}
+      className={cn("container-page my-16 scroll-mt-24 sm:my-20 lg:my-24", className)}
     >
       <Reveal className="mb-10 max-w-2xl sm:mb-12">
         <div className="mb-4 flex items-center gap-3">

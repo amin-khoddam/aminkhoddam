@@ -64,7 +64,7 @@ export function TransactionList() {
 
       {!hydrated ? (
         <ul className="divide-y divide-border/70">
-          {[0, 1, 2].map(row => (
+          {[0, 1, 2].map((row) => (
             <li key={row} className="flex items-center gap-3 p-4 sm:px-6">
               <Skeleton className="size-10 rounded-xl" />
               <div className="flex-1 space-y-2">
@@ -86,7 +86,7 @@ export function TransactionList() {
           </p>
         </div>
       ) : (
-        <ul className="divide-y divide-border/70 overflow-y-auto h-[239px] max-h-[239px]">
+        <ul className="h-[239px] max-h-[239px] divide-y divide-border/70 overflow-y-auto">
           {transactions.map((transaction) => {
             const Icon = TYPE_ICONS[transaction.type];
             const isCredit = transactionDirection(transaction.type) === "credit";
