@@ -15,11 +15,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ResumeDownloadButton } from "@/features/wallet/components/resume-download-button";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { portfolioSections } from "@/config/site";
 import { LocaleSwitcher } from "./locale-switcher";
 import { ThemeToggle } from "./theme-toggle";
-
 /**
  * Mobile navigation. Opens from the bottom so it matches the wallet sheets and
  * keeps every target within thumb reach.
@@ -30,6 +29,8 @@ export function MobileNav() {
   const tLanguage = useTranslations("language");
   const tCommon = useTranslations("common");
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -59,6 +60,18 @@ export function MobileNav() {
           {portfolioSections.map((section) => (
             <SheetClose key={section} asChild>
               <Link
+                onClick={(e) => {
+                  if (isHome) {
+                    e.preventDefault();
+
+                    document.getElementById(section)?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+
+                    setOpen(false);
+                  }
+                }}
                 href={`/#${section}`}
                 className="flex min-h-12 items-center rounded-xl border border-border/70 bg-muted/40 px-4 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-foreground"
               >
