@@ -72,7 +72,7 @@ export function ResumeDownloadButton({
         </Button>
       </DialogTrigger>
 
-      <DialogContent closeLabel={tCommon("close")} className="sm:max-w-md">
+      <DialogContent onCloseAutoFocus={e => e.preventDefault()} closeLabel={tCommon("close")} className="sm:max-w-md">
         {status === "completed" ? (
           <>
             <DialogHeader>
