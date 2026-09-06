@@ -68,7 +68,7 @@ export function HeroSection() {
 
         <Reveal delay={0.12} className="lg:animate-float">
           <WalletPreviewCard />
-          <span className="block text-sm font-medium text-muted-foreground sm:text-base text-center mt-2">
+          <span className="mt-2 block text-center text-sm font-medium text-muted-foreground sm:text-base">
             {t("note")}
           </span>
         </Reveal>
