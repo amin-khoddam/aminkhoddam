@@ -54,6 +54,7 @@
   },
   "hero": {
     "availability": "Available for frontend work",
+    "note": "Note: Some information on this website is fictional. For accurate information, please refer to my resume.",
     "name": "Amin Khoddam",
     "headlineLead": "I build",
     "headlineHighlight": "interfaces that feel effortless",
