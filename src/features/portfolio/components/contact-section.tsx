@@ -118,8 +118,6 @@ export function ContactSection() {
                   })}
                 </div>
               </div>
-
-              <p className="text-xs text-muted-foreground">{t("placeholderNote")}</p>
             </div>
           </div>
         </Surface>

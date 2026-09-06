@@ -192,8 +192,7 @@
     "availability": "آماده بررسی فرصت‌های جدید",
     "primaryCta": "ارسال ایمیل",
     "secondaryCta": "دانلود رزومه",
-    "socialLabel": "جاهای دیگر",
-    "placeholderNote": "اطلاعات تماس در این نسخه نمونه است."
+    "socialLabel": "جاهای دیگر"
   },
   "footer": {
     "tagline": "ساخته‌شده با Next.js، TypeScript و Tailwind CSS.",

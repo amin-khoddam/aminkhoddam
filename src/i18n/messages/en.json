@@ -195,8 +195,7 @@
     "availability": "Open to new opportunities",
     "primaryCta": "Send an email",
     "secondaryCta": "Download resume",
-    "socialLabel": "Elsewhere",
-    "placeholderNote": "Contact details are placeholders in this demo build."
+    "socialLabel": "Elsewhere"
   },
   "footer": {
     "tagline": "Built with Next.js, TypeScript and Tailwind CSS.",
