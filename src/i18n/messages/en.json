@@ -129,41 +129,23 @@
   },
   "experience": {
     "eyebrow": "Experience",
-    "title": "Three years, three teams",
+    "title": "Three years",
     "description": "Where I have worked and what I actually shipped there.",
     "present": "Present",
     "items": {
-      "nikan": {
-        "company": "Nikan Pay",
+      "parsAzma": {
+        "company": "pars azmaye teb",
         "role": "Frontend Developer",
-        "period": "Mar 2025 — Present",
-        "summary": "Own the customer-facing wallet and payment surfaces of a consumer fintech app.",
+        "period": "Mar 2023 — Present",
+        "summary": "Worked on multiple projects with full frontend ownership.",
         "highlights": {
-          "h1": "Rebuilt the top-up and withdrawal flows around a shared amount input with instant validation, noticeably cutting failed submissions.",
-          "h2": "Introduced a typed transaction layer so balance math lives in one tested module instead of being duplicated across screens.",
-          "h3": "Moved static marketing pages to server components and trimmed the client bundle for the authenticated area."
-        }
-      },
-      "radmehr": {
-        "company": "Radmehr Studio",
-        "role": "Frontend Developer",
-        "period": "Jun 2024 — Feb 2025",
-        "summary": "Built client web products in a small product studio, from design handoff to release.",
-        "highlights": {
-          "h1": "Delivered a multi-tenant admin dashboard with server-driven tables, filters and pagination.",
-          "h2": "Set up the studio component library so three concurrent projects shared one set of primitives.",
-          "h3": "Added Persian and English support with full RTL mirroring to an existing single-locale codebase."
-        }
-      },
-      "parsa": {
-        "company": "Parsa Web",
-        "role": "Junior Frontend Developer",
-        "period": "Aug 2023 — May 2024",
-        "summary": "First professional role: turning designs into responsive, tested React interfaces.",
-        "highlights": {
-          "h1": "Converted a legacy jQuery storefront into a component-based React application, screen by screen.",
-          "h2": "Replaced ad-hoc form handling with React Hook Form and shared schema validation.",
-          "h3": "Wrote the first responsive checklist for the team after fixing a long tail of mobile layout bugs."
+          "h1": "Improved Lighthouse Performance from 76 to 98 by resolving LCP and TBT issues.",
+          "h2": "Reduced page transfer size from 2.8 MB to 1.9 MB through code splitting, image optimization, and API caching.",
+          "h3": "Built an AI-powered chat interface for product discovery, simplifying how users find relevant products.",
+          "h4": "Developed a reusable API layer with Axios, React Query, and custom hooks, reducing code duplication.",
+          "h5": "Implemented a real-time ticketing chat system with WebSocket, supporting file attachments and notifications.",
+          "h6": "Optimized SEO and page performance using Next.js App Router with SSR, SSG, and ISR.",
+          "h7": "Collaborated with backend, QA, and design teams and participated in code reviews."
         }
       }
     }

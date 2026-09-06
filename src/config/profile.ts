@@ -7,14 +7,14 @@
  */
 
 export const profile = {
-  email: "hello@example.com",
-  phone: "+98 912 000 0000",
+  email: "amin.khoddam.connect@gmail.com",
+  phone: "+98 910 459 0384",
   resumePath: "/resume/amin-khoddam-frontend-resume.pdf",
   resumeFileName: "amin-khoddam-frontend-resume.pdf",
   socials: [
-    { id: "github", url: "https://github.com/example" },
-    { id: "linkedin", url: "https://linkedin.com/in/example" },
-    { id: "telegram", url: "https://t.me/example" },
+    { id: "github", url: "https://github.com/thejuliesia" },
+    { id: "linkedin", url: "http://www.linkedin.com/in/amin-khoddam" },
+    { id: "telegram", url: "https://t.me/aminkhoddam" },
   ],
 } as const;
 
@@ -48,23 +48,11 @@ export type ExperienceEntry = {
 
 export const experiences: readonly ExperienceEntry[] = [
   {
-    id: "nikan",
+    id: "parsAzma",
     current: true,
-    highlightIds: ["h1", "h2", "h3"],
+    highlightIds: ["h1", "h2", "h3", "h4", "h5", "h6", "h7"],
     stack: ["Next.js", "TypeScript", "Zustand", "React Hook Form", "Zod"],
-  },
-  {
-    id: "radmehr",
-    current: false,
-    highlightIds: ["h1", "h2", "h3"],
-    stack: ["React", "TanStack Query", "Tailwind CSS", "next-intl"],
-  },
-  {
-    id: "parsa",
-    current: false,
-    highlightIds: ["h1", "h2", "h3"],
-    stack: ["React", "JavaScript", "Sass", "React Hook Form"],
-  },
+  }
 ];
 
 export type ProjectEntry = {
@@ -83,13 +71,14 @@ export const projects: readonly ProjectEntry[] = [
     featured: true,
     stack: ["Next.js", "Zustand", "Zod", "Framer Motion", "vaul"],
     internalHref: "/wallet",
+    demoUrl: "https://aminkhoddam.ir",
+    repoUrl: "https://github.com/thejuliesia/aminkhoddam.git",
   },
   {
     id: "commerce",
     featured: false,
     stack: ["React", "TanStack Query", "TypeScript", "Tailwind CSS"],
     demoUrl: "https://example.com/commerce",
-    repoUrl: "https://github.com/example/commerce-console",
   },
   {
     id: "booking",

@@ -26,7 +26,7 @@ export function ContactSection() {
       Icon: Mail,
       label: t("emailLabel"),
       value: profile.email,
-      href: `mailto:${profile.email}`,
+      href: `https://mail.google.com/mail/?view=cm&to=amin.khoddam.connect@gmail.com`,
     },
     {
       id: "phone",
@@ -62,9 +62,9 @@ export function ContactSection() {
                     <Icon className="size-3.5" aria-hidden />
                     {label}
                   </dt>
-                  <dd className="mt-1.5 text-sm font-medium break-words">
+                  <dd className="mt-1.5 text-sm font-medium break-words line-clamp-1">
                     {href ? (
-                      <a href={href} className="transition-colors hover:text-brand" dir="ltr">
+                      <a target={id === 'email' ? '_blank' : '_self'} href={href} className="transition-colors hover:text-brand" dir="ltr">
                         {value}
                       </a>
                     ) : (
@@ -78,7 +78,7 @@ export function ContactSection() {
             <div className="flex flex-col justify-between gap-6">
               <div className="flex flex-wrap gap-3">
                 <Button asChild size="xl">
-                  <a href={`mailto:${profile.email}`}>
+                  <a target="_blank" href={"https://mail.google.com/mail/?view=cm&to=amin.khoddam.connect@gmail.com"}>
                     <Mail data-icon="inline-start" />
                     {t("primaryCta")}
                   </a>
