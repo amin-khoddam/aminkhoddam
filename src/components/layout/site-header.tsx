@@ -5,7 +5,7 @@ import { portfolioSections } from "@/config/site";
 import { ResumeDownloadButton } from "@/features/portfolio/components/resume-download-button";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { useScrolled } from "@/hooks/use-scrolled";
-import { Link, usePathname } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Brand } from "./brand";
 import { LocaleSwitcher } from "./locale-switcher";
