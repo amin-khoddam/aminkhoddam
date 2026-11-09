@@ -11,6 +11,7 @@ import { Brand } from "./brand";
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileNav } from "./mobile-nav";
 import { ThemeToggle } from "./theme-toggle";
+import { SectionLink } from "@/features/portfolio/components/section-link";
 
 export function SiteHeader() {
   const t = useTranslations("nav");
@@ -35,19 +36,9 @@ export function SiteHeader() {
               const isActive = isHome && activeSection === section;
 
               return (
-                <Link
-                  onClick={(e) => {
-                    if (isHome) {
-                      e.preventDefault();
-
-                      document.getElementById(section)?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
-                  }}
+                <SectionLink
                   key={section}
-                  href={`/#${section}`}
+                  section={section}
                   aria-current={isActive ? "true" : undefined}
                   className={cn(
                     "rounded-full px-3 py-1.5 text-sm font-medium transition-colors outline-none focus-visible:ring-3 focus-visible:ring-ring",
@@ -57,7 +48,7 @@ export function SiteHeader() {
                   )}
                 >
                   {t(section)}
-                </Link>
+                </SectionLink>
               );
             })}
           </nav>

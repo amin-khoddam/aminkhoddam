@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { SectionLink } from "@/features/portfolio/components/section-link";
 
 interface BrandProps {
   className?: string;
@@ -11,8 +11,7 @@ export function Brand({ className, showRole = false }: BrandProps) {
   const t = useTranslations("nav");
 
   return (
-    <Link
-      href="/"
+    <SectionLink
       className={cn(
         "group flex items-center gap-2.5 rounded-full outline-none focus-visible:ring-3 focus-visible:ring-ring",
         className,
@@ -30,6 +29,6 @@ export function Brand({ className, showRole = false }: BrandProps) {
           <span className="truncate text-[0.7rem] text-muted-foreground">{t("brandRole")}</span>
         ) : null}
       </span>
-    </Link>
+    </SectionLink>
   );
 }

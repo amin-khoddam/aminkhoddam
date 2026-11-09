@@ -4,6 +4,7 @@ import { socialIcons } from "@/components/shared/social-icons";
 import { portfolioSections, siteConfig } from "@/config/site";
 import { profile } from "@/config/profile";
 import { Link } from "@/i18n/navigation";
+import { SectionLink } from "@/features/portfolio/components/section-link";
 
 export function SiteFooter() {
   const t = useTranslations("footer");
@@ -25,12 +26,12 @@ export function SiteFooter() {
           <ul className="space-y-2">
             {portfolioSections.map((section) => (
               <li key={section}>
-                <Link
-                  href={`/#${section}`}
+                <SectionLink
+                  section={section}
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {tNav(section)}
-                </Link>
+                </SectionLink>
               </li>
             ))}
           </ul>

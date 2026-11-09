@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Surface } from "@/components/ui/surface";
 import { heroStack, heroStatIds } from "@/config/profile";
 import { ResumeDownloadButton } from "@/features/portfolio/components/resume-download-button";
-import { Link } from "@/i18n/navigation";
 import { TerminalPreviewCard } from "@/features/portfolio/components/terminal-preview-card";
+import { SectionLink } from "@/features/portfolio/components/section-link";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -48,7 +48,7 @@ export function HeroSection() {
           <Reveal delay={0.18}>
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center">
               <Button asChild size="xl" className="w-full sm:w-auto">
-                <Link href="/#projects">{t("primaryCta")}</Link>
+                <SectionLink section="projects">{t("primaryCta")}</SectionLink>
               </Button>
               <div className="w-full sm:w-auto [&>*]:w-full sm:[&>*]:w-auto">
                 <ResumeDownloadButton variant="outline" size="xl" label={t("secondaryCta")} />
