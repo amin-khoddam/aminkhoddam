@@ -21,9 +21,7 @@ const securityHeaders = [
 ] as const;
 
 const nextConfig: NextConfig = {
-  // Emits a self-contained server bundle so the production image only ships
-  // the files the server actually needs.
-  output: "standalone",
+  output: process.env.VERCEL ? undefined : "standalone",
   poweredByHeader: false,
   reactStrictMode: true,
   experimental: {
