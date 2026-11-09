@@ -37,7 +37,7 @@ export function LocaleSwitcher() {
         <Button
           variant="ghost"
           size="icon-sm"
-          className="size-10 lg:size-7"
+          className="size-10 lg:size-7 cursor-pointer"
           aria-label={t("label")}
           disabled={isPending}
         >
