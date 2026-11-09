@@ -1,10 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Wallet } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { portfolioSections } from "@/config/site";
-import { ResumeDownloadButton } from "@/features/wallet/components/resume-download-button";
+import { ResumeDownloadButton } from "@/features/portfolio/components/resume-download-button";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { useScrolled } from "@/hooks/use-scrolled";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -66,24 +64,17 @@ export function SiteHeader() {
 
           <span className="mx-1 hidden h-5 w-px bg-border lg:block" aria-hidden />
 
-          <div className="hidden items-center gap-0.5 md:flex">
+          <div className="hidden items-center gap-0.5 sm:flex">
             <ThemeToggle />
             <LocaleSwitcher />
           </div>
 
           <ResumeDownloadButton
-            variant="ghost"
+            variant="default"
             size="sm"
             label={t("resume")}
-            className="hidden lg:inline-flex"
+            className="hidden lg:inline-flex h-11 min-w-11 rounded-full lg:h-8 lg:min-w-0"
           />
-
-          <Button asChild size="sm" className="h-11 min-w-11 rounded-full lg:h-8 lg:min-w-0">
-            <Link href="/wallet" aria-label={t("wallet")}>
-              <Wallet data-icon="inline-start" />
-              <span className="hidden sm:inline">{t("wallet")}</span>
-            </Link>
-          </Button>
 
           <MobileNav />
         </div>

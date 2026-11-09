@@ -61,7 +61,7 @@
     "headlineTail": "و در محیط واقعی دوام می‌آورند.",
     "intro": "توسعه‌دهنده فرانت‌اند با سه سال تجربه در ساخت محصولات React و Next.js. برایم دیزاین‌سیستم، وضعیت type-safe، جریان‌های در دسترس و رابط‌هایی مهم است که در فارسی و انگلیسی به یک اندازه درست کار کنند.",
     "primaryCta": "دیدن پروژه‌ها",
-    "secondaryCta": "دانلود رزومه",
+    "secondaryCta": "مشاهده رزومه",
     "stackLabel": "کار با",
     "stats": {
       "years": { "value": "۳+", "label": "سال تجربه" },
@@ -191,7 +191,7 @@
     "availabilityLabel": "وضعیت",
     "availability": "آماده بررسی فرصت‌های جدید",
     "primaryCta": "ارسال ایمیل",
-    "secondaryCta": "دانلود رزومه",
+    "secondaryCta": "مشاهده رزومه",
     "socialLabel": "جاهای دیگر"
   },
   "footer": {
@@ -292,7 +292,7 @@
     }
   },
   "resume": {
-    "title": "دانلود رزومه",
+    "title": "رزومه",
     "priceNotice": "دانلود رزومه {amount} {currency} از موجودی کیف پول کم می‌کند.",
     "confirmDescription": "موجودی شما {balance} {currency} است. بعد از این دانلود {remaining} {currency} می‌شود.",
     "confirm": "پرداخت و دانلود",

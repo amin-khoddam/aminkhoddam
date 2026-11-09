@@ -5,9 +5,8 @@ import { TechBadge } from "@/components/shared/tech-badge";
 import { Button } from "@/components/ui/button";
 import { Surface } from "@/components/ui/surface";
 import { heroStack, heroStatIds } from "@/config/profile";
-import { ResumeDownloadButton } from "@/features/wallet/components/resume-download-button";
+import { ResumeDownloadButton } from "@/features/portfolio/components/resume-download-button";
 import { Link } from "@/i18n/navigation";
-import { WalletPreviewCard } from "./wallet-preview-card";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -67,7 +66,6 @@ export function HeroSection() {
         </div>
 
         <Reveal delay={0.12} className="lg:animate-float">
-          <WalletPreviewCard />
           <span className="mt-2 block text-center text-sm font-medium text-muted-foreground sm:text-base">
             {t("note")}
           </span>

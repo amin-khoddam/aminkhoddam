@@ -61,7 +61,7 @@
     "headlineTail": "and hold up in production.",
     "intro": "Frontend developer with 3 years of experience shipping React and Next.js products. I care about design systems, type-safe state, accessible flows, and interfaces that work equally well in Persian and English.",
     "primaryCta": "View projects",
-    "secondaryCta": "Download resume",
+    "secondaryCta": "View Resume",
     "stackLabel": "Working with",
     "stats": {
       "years": { "value": "3+", "label": "Years of experience" },
@@ -194,7 +194,7 @@
     "availabilityLabel": "Availability",
     "availability": "Open to new opportunities",
     "primaryCta": "Send an email",
-    "secondaryCta": "Download resume",
+    "secondaryCta": "View Resume",
     "socialLabel": "Elsewhere"
   },
   "footer": {
@@ -295,7 +295,7 @@
     }
   },
   "resume": {
-    "title": "Download resume",
+    "title": "resume",
     "priceNotice": "Downloading the resume costs {amount} {currency} from your wallet balance.",
     "confirmDescription": "Your balance is {balance} {currency}. After this download it will be {remaining} {currency}.",
     "confirm": "Pay and download",

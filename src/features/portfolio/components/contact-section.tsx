@@ -7,7 +7,7 @@ import { socialIcons } from "@/components/shared/social-icons";
 import { Button } from "@/components/ui/button";
 import { Surface } from "@/components/ui/surface";
 import { profile } from "@/config/profile";
-import { ResumeDownloadButton } from "@/features/wallet/components/resume-download-button";
+import { ResumeDownloadButton } from "@/features/portfolio/components/resume-download-button";
 
 interface ContactRow {
   id: string;

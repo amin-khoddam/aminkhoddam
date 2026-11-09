@@ -14,7 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ResumeDownloadButton } from "@/features/wallet/components/resume-download-button";
+import { ResumeDownloadButton } from "@/features/portfolio/components/resume-download-button";
 import { Link, usePathname } from "@/i18n/navigation";
 import { portfolioSections } from "@/config/site";
 import { LocaleSwitcher } from "./locale-switcher";
