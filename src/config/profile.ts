@@ -9,11 +9,9 @@
 export const profile = {
   email: "amin.khoddam.connect@gmail.com",
   phone: "+98 910 459 0384",
-  resumePath: "/resume/amin-khoddam-frontend-resume.pdf",
-  resumeFileName: "amin-khoddam-frontend-resume.pdf",
   socials: [
-    { id: "github", url: "https://github.com/thejuliesia" },
-    { id: "linkedin", url: "http://www.linkedin.com/in/amin-khoddam" },
+    { id: "github", url: "https://github.com/amin-khoddam" },
+    { id: "linkedin", url: "https://www.linkedin.com/in/amin-khoddam" },
     { id: "telegram", url: "https://t.me/aminkhoddam" },
   ],
 } as const;
@@ -33,8 +31,9 @@ export type SkillGroup = {
 
 export const skillGroups: readonly SkillGroup[] = [
   { id: "core", skills: ["React", "Next.js", "TypeScript", "JavaScript"] },
-  { id: "ui", skills: ["Tailwind CSS", "shadcn/ui", "Radix UI", "Framer Motion", "RTL layouts"] },
-  { id: "data", skills: ["Zustand", "TanStack Query", "React Hook Form", "Zod", "Axios"] },
+  { id: "ui", skills: ["Tailwind CSS", "shadcn/ui", "Material UI", "Radix UI", "Framer Motion", "RTL layouts"] },
+  { id: "data", skills: ["Zustand", "TanStack Query", "Redux Toolkit", "WebSocket", "Vercel AI SDK", "Axios"] },
+  { id: "forms", skills: ["React Hook Form", "Zod"] },
   { id: "quality", skills: ["Vitest", "ESLint", "Prettier", "Clean architecture"] },
   { id: "delivery", skills: ["Docker", "GitHub Actions", "Web performance", "Accessibility"] },
 ];
@@ -50,8 +49,14 @@ export const experiences: readonly ExperienceEntry[] = [
   {
     id: "parsAzma",
     current: true,
-    highlightIds: ["h1", "h2", "h3", "h4", "h5", "h6", "h7"],
-    stack: ["Next.js", "TypeScript", "Zustand", "React Hook Form", "Zod"],
+    highlightIds: ["h1", "h2", "h3", "h4", "h5", "h6",],
+    stack: ["Next.js", "TypeScript", "Zustand", "TanStack Query", "React Hook Form", "Zod", "shadcn/ui"],
+  },
+  {
+    id: "parsAzmaIntern",
+    current: false,
+    highlightIds: ["h1", "h2",],
+    stack: ["Next.js", "TypeScript", "Redux Toolkit", "TanStack Query", "React Hook Form", "Zod", " Material UI"],
   },
 ];
 

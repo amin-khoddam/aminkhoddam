@@ -3,7 +3,6 @@ import { Brand } from "@/components/layout/brand";
 import { socialIcons } from "@/components/shared/social-icons";
 import { portfolioSections, siteConfig } from "@/config/site";
 import { profile } from "@/config/profile";
-import { Link } from "@/i18n/navigation";
 import { SectionLink } from "@/features/portfolio/components/section-link";
 
 export function SiteFooter() {
@@ -41,12 +40,14 @@ export function SiteFooter() {
           <h2 className="mb-3 text-xs font-semibold tracking-[0.2em] uppercase">{t("demo")}</h2>
           <ul className="space-y-2">
             <li>
-              <Link
-                href="/wallet"
+              <a
+                href="https://wallet.aminkhoddam.ir/en"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {tNav("wallet")}
-              </Link>
+              </a>
             </li>
           </ul>
 
